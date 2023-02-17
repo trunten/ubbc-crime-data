@@ -1,0 +1,190 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.light {
+    --bg-theme: black;
+    --clr-theme: black;
+}
+
+.dark {
+    --bg-theme: white;
+    --clr-theme: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.loading {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background-color: rgba(128, 128, 128, 0.7);
+    z-index: 999;
+}
+
+.loading .spinner-border {
+    height: 100px;
+    width: 100px;
+    border-width: 10px;
+}
+
+
+body {
+    transition: all 1s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+#header {
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 0 !important;
+}
+
+.light #header {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 1)), url("../images/bg-header1.jpg");
+}
+
+.dark #header {
+    background-image: linear-gradient(rgba(15, 37, 55, 0.6), rgba(15, 37, 55, 1)), url("../images/bg-header2.jpg");
+}
+
+#search .input-group svg {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    color: black;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#search-history-list a:hover > i {
+    display: inline !important;
+    color: rgb(212, 0, 0);
+    position: absolute;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+#social a {
+    padding-inline: 10px !important;
+}
+
+#social a:hover {
+    opacity: 0.8;
+}
+
+#radar-graph {
+    max-height: 500px;
+}
+
+.toggle {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    transition: opacity 200ms linear;
+    opacity: 0.6;
+}
+
+.toggle:hover {
+    opacity: 1;
+}
+
+.toggle label {
+    font-size: 1.4rem;
+    color: var(--clr-theme);
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle-btn {
+    padding: 0.3rem;
+    border: 1.5px solid var(--bg-theme);
+    border-radius: 100vmax;
+    outline: none;
+    background-color: transparent;
+    width: 3.5rem;
+    height: 1.8rem;
+    cursor: pointer;
+}
+
+.toggle-btn::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--bg-theme);
+    border-radius: 50%;
+    margin-left: 1.75rem; /* Can't transition auto :( */
+    transition: margin 150ms linear;
+}
+
+.toggle-on:checked ~ .toggle-btn::after {
+    margin-left: 0;
+}
+
+#theme-toggle {
+    position: absolute;
+    scale: 0.7;
+    top: 1%;
+    right: 1%;
+}
+
+#alert * {
+    margin: 0;
+    padding: 0;
+}
+
+#alert {
+    background-color: whitesmoke;
+    padding: 1.8rem;
+    border: 1px solid rgb(170, 170, 170);
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.8);
+    width: 95%;
+    max-width: 300px;
+    color: black;
+}
+
+#alert > div {
+    display: grid;
+    place-items: center;
+    gap: 1.8rem;
+}
+
+#alert svg { 
+    fill: red;
+    height: 3rem;
+    width: 3rem;
+}
+
+#alertMessage::first-letter {
+    text-transform: uppercase;
+}
+
+.links{
+    padding: 10px 0px 10px 0px;
+}
+
+@media screen and (max-width: 400px) {
+    .nav-link i, .nav-link svg {
+        font-size: 10px;
+    }    
+}
+
+@media screen and (max-width: 320px) {
+    .nav-link:not(i, svg) {
+        font-size: 11px;
+    }    
+}

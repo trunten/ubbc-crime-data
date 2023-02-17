@@ -1,7 +1,7 @@
 # City Crime Data
 
-* Github URL: https://github.com/ihsanm/City-crime-data
-* Deployed Site: https://ihsanm.github.io/City-crime-data/
+* Github URL: https://github.com/trunten/ubbc-crime-data
+* Deployed Site: https://trunten.github.io/ubbc-crime-data
 * Presentation: [PDF File](./assets/presentation.pdf)
 
 ## Description

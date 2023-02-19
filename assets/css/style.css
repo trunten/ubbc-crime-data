@@ -33,6 +33,11 @@
 body {
     transition: all 1s ease;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+body::after {
+    content: '';
 }
 
 footer {

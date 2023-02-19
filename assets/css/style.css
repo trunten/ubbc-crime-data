@@ -36,9 +36,6 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
-body::after {
-    content: '';
-}
 
 footer {
     background-color: black;

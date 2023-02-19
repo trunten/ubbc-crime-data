@@ -114,6 +114,7 @@ h1 {
 
 #radar-graph {
     max-height: 500px;
+    max-width: 100%;
 }
 
 .toggle {

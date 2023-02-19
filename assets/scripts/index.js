@@ -404,7 +404,7 @@ function getCrimeData(location) {
       if (res.ok) { 
         return res.json(); 
       } else {
-        throw new Error(`Server error (${res.status}).\nPlease try again`);
+        throw new Error("Server error (" + res.status + ")\nPlease try again.");
       }
     })
     .then(data => {
